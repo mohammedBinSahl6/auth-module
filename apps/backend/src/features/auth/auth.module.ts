@@ -24,6 +24,7 @@ import { JwtStrategy } from './strategies/jwt.strategy';
         return {
           secret,
           signOptions: {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
             expiresIn: expiresIn as any, // expiresIn is a string from config, JwtModuleOptions expects StringValue
           },
         };
